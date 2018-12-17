@@ -3,13 +3,16 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>郑沛洲的个人主页</title>
+  <title>BM字符串匹配算法 | 郑沛洲的个人主页</title>
   <meta name="author" content="郑沛洲">
+  
+  <meta name="description" content="BM算法关于原理可以参考：我的博客这里主要写代码实现
+代码实现1234567891011121314151617181920212223242526272829303132333435363738// a,b 表示主串和模式串；n，m 表示主串和模式串的长度。  public int bm(char">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="BM字符串匹配算法">
   <meta property="og:site_name" content="郑沛洲的个人主页">
 
   
@@ -69,52 +72,7 @@
 </div>
 </header>
     <div id="content" class="inner">
-      <div id="main-col" class="alignleft"><div id="wrapper">
-    <article class="post">
-  
-  <div class="post-content">
-    <header>
-        <div class="icon"></div>
-        
-        <time datetime="2018-12-17T03:07:35.000Z"><a href="/2018/12/17/数据结构-堆/">2018-12-17</a></time>
-        
-  
-    <h1 class="title"><a href="/2018/12/17/数据结构-堆/">数据结构--堆</a></h1>
-  
-
-    </header>
-
-    <div class="entry">
-      
-        
-    <div id="toc">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#数据结构–堆"><span class="toc-text">数据结构–堆</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本概念"><span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#性质"><span class="toc-text">性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#应用"><span class="toc-text">应用</span></a></li></ol></li></ol>
-    </div>
-
-        <h1 id="数据结构–堆"><a href="#数据结构–堆" class="headerlink" title="数据结构–堆"></a>数据结构–堆</h1><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>堆（英语：Heap）是计算机科学中的一种特别的树状数据结构。若是满足以下特性，即可称为堆：“给定堆中任意节点 P 和 C，若 P 是 C 的母节点，那么 P 的值会小于等于（或大于等于） C 的值”。若母节点的值恒小于等于子节点的值，此堆称为最小堆（英语：min heap）；反之，若母节点的值恒大于等于子节点的值，此堆称为最大堆（英语：max heap）。在堆中最顶端的那一个节点，称作根节点（英语：root node），根节点本身没有母节点（英语：parent node）。</p>
-<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><p>任意节点小于（或大于）它的所有后裔，最小元（或最大元）在堆的根上（堆序性）。<br>堆总是一棵完全树。即除了最底层，其他层的节点都被元素填满，且最底层尽可能地从左到右填入。</p>
-<p><img src="/img/1.jpg" alt="复杂度分析"></p>
-<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><p>The heap data structure has many applications.</p>
-<p>Heapsort: One of the best sorting methods being in-place and with no quadratic worst-case scenarios.<br>Selection algorithms: A heap allows access to the min or max element in constant time, and other selections (such as median or kth-element) can be done in sub-linear time on data that is in a heap.[17]<br>Graph algorithms: By using heaps as internal traversal data structures, run time will be reduced by polynomial order. Examples of such problems are Prim’s minimal-spanning-tree algorithm and Dijkstra’s shortest-path algorithm.<br>Priority Queue: A priority queue is an abstract concept like “a list” or “a map”; just as a list can be implemented with a linked list or an array, a priority queue can be implemented with a heap or a variety of other methods.<br>K-way merge: A heap data structure is useful to merge many already-sorted input streams into a single sorted output stream. Examples of the need for merging include external sorting and streaming results from distributed data such as a log structured merge tree. The inner loop is obtaining the min element, replacing with the next element for the corresponding input stream, then doing a sift-down heap operation. (Alternatively the replace function.) (Using extract-max and insert functions of a priority queue are much less efficient.)<br>Order statistics: The Heap data structure can be used to efficiently find the kth smallest (or largest) element in an array.</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-<!-- 返回顶部 -->
-<div id="toTop">
-	<a href="#">▲</a>
-	<a href="#footer">▼</a>
-</div>
-
-    <article class="post">
+      <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
   <div class="post-content">
     <header>
@@ -123,7 +81,7 @@
         <time datetime="2018-12-17T02:47:27.000Z"><a href="/2018/12/17/BM字符串匹配算法/">2018-12-17</a></time>
         
   
-    <h1 class="title"><a href="/2018/12/17/BM字符串匹配算法/">BM字符串匹配算法</a></h1>
+    <h1 class="title">BM字符串匹配算法</h1>
   
 
     </header>
@@ -144,6 +102,42 @@
       
         
         
+  <div class="tags">
+    <a href="/tags/Algorithm/">Algorithm</a>
+  </div>
+
+        <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina"></a>
+    <a href="#" class="bds_tqq" data-cmd="tqq"></a>
+    <a href="#" class="bds_renren" data-cmd="renren"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin"></a>
+</div>
+
+<script>
+    window._bd_share_config = {
+        "common": {
+            "bdSnsKey": {},
+            "bdText": "",
+            "bdMini": "2",
+            "bdPic": "",
+            "bdStyle": "0",
+            "bdSize": "16"
+        },
+        "share": {},
+        "image": {
+            "viewList": ["qzone", "tsina", "tqq", "renren", "weixin"],
+            "viewText": “分享到",
+            "viewSize": "16"
+        },
+        "selectShare": {
+            "bdContainerClass": null,
+            "bdSelectMiniList": ["qzone", "tsina", "tqq", "renren", "weixin"]
+        }
+    };
+    with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+</script>
       
       <div class="clearfix"></div>
     </footer>
@@ -153,14 +147,7 @@
 <div id="toTop">
 	<a href="#">▲</a>
 	<a href="#footer">▼</a>
-</div>
- 
-<nav id="pagination">
-  
-  
-  <div class="clearfix"></div>
-</nav>
-</div></div>
+</div></div></div>
       <aside id="sidebar" class="alignright">
         
           <script language="javascript">

@@ -32,7 +32,7 @@
 	<div class="alignleft col-one">
 		
 			<div class="avatar">
-				<img src="/img/zpz2">
+				<img src="/img/zpz2.jpg">
               </div>
 		
 		<div class="header-div">
@@ -78,13 +78,17 @@
       <div class="post-content">
         <header>
           <div class="icon"></div>
-          <time datetime="2018-12-16T02:48:54.000Z"><a href="/2018/12/16/test/">2018-12-16</a></time>
+          <time datetime="2018-12-17T03:07:35.000Z"><a href="/2018/12/17/数据结构-堆/">2018-12-17</a></time>
           
-            <h1 class="title"><a href="/2018/12/16/test/">test</a></h1>
+            <h1 class="title"><a href="/2018/12/17/数据结构-堆/">数据结构--堆</a></h1>
           
         </header>
         <div class="archive-tags">
           
+  <div class="tags">
+    <a href="/tags/Algorithm/">Algorithm</a>
+  </div>
+
         </div>
       </div>
     </article>
@@ -93,13 +97,17 @@
       <div class="post-content">
         <header>
           <div class="icon"></div>
-          <time datetime="2018-12-16T02:46:52.990Z"><a href="/2018/12/16/hello-world/">2018-12-16</a></time>
+          <time datetime="2018-12-17T02:47:27.000Z"><a href="/2018/12/17/BM字符串匹配算法/">2018-12-17</a></time>
           
-            <h1 class="title"><a href="/2018/12/16/hello-world/">Hello World</a></h1>
+            <h1 class="title"><a href="/2018/12/17/BM字符串匹配算法/">BM字符串匹配算法</a></h1>
           
         </header>
         <div class="archive-tags">
           
+  <div class="tags">
+    <a href="/tags/Algorithm/">Algorithm</a>
+  </div>
+
         </div>
       </div>
     </article>
@@ -112,19 +120,27 @@
 </nav></div></div>
       <aside id="sidebar" class="alignright">
         
-           <div class="search">
-  <form action="/search/index.html" method="get" accept-charset="utf-8">
-<!--     <input type="search" name="wd"results="0" placeholder="Search">
-    <input type="hidden" name="wd" value="site:yoursite.com"> -->
-     <input type="text" id="search" class="st-default-search-input" placeholder="Search" style="height: 100%">
-  </form>
-</div> 
+          <script language="javascript">
+function search(formname) {
+    formname.method = "get";
+    formname.action = "http://www.baidu.com/baidu";
+    document.search_form.word.value = document.search_form.word.value;
+    return true;
+}
+</script>
+
+<div class="search">
+    <form name="search_form" target="_blank" onsubmit="search(this)">
+        <input type="search" name="word" results="0" placeholder="百度站内搜索" onblur="this.value=''">
+        <!-- <input type="submit" value="搜索"> -->
+    </form>
+</div>
         
            
 
         
           <div class="widget tag">
-  <h3 class="title">微信公众账号</h3>
+  <h3 class="title">个人微信号</h3>
     <ul class="entry">
       <img src="/img/wechat.jpg" alt="有事私戳，鄙人微信" style="width: 100%">
     </ul>
@@ -155,7 +171,7 @@
         
           
   <div class="widget tag">
-    <h3 class="title">友情链接</h3>
+    <h3 class="title">个人链接</h3>
       <ul class="entry">
         
           <li class="link"><a href="https://blog.csdn.net/zpznba">CSDN博客</a></li>
@@ -166,6 +182,13 @@
 
         
           
+<div class="widget tagcloud">
+  <h3 class="title">Tag Cloud</h3>
+  <div class="entry">
+    <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a>
+  </div>
+</div>
+
         
       </aside>
       <div class="clearfix"></div>

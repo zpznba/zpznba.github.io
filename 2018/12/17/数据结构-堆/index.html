@@ -3,13 +3,15 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>郑沛洲的个人主页</title>
+  <title>数据结构--堆 | 郑沛洲的个人主页</title>
   <meta name="author" content="郑沛洲">
+  
+  <meta name="description" content="数据结构–堆基本概念堆（英语：Heap）是计算机科学中的一种特别的树状数据结构。若是满足以下特性，即可称为堆：“给定堆中任意节点 P 和 C，若 P 是 C 的母节点，那么 P 的值会小于等于（或大于等于） C 的值”。若母节点的值恒小于等于子节点的值，此堆称为最小堆（英语：min heap）；反之">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="数据结构--堆">
   <meta property="og:site_name" content="郑沛洲的个人主页">
 
   
@@ -69,8 +71,7 @@
 </div>
 </header>
     <div id="content" class="inner">
-      <div id="main-col" class="alignleft"><div id="wrapper">
-    <article class="post">
+      <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
   <div class="post-content">
     <header>
@@ -79,7 +80,7 @@
         <time datetime="2018-12-17T03:07:35.000Z"><a href="/2018/12/17/数据结构-堆/">2018-12-17</a></time>
         
   
-    <h1 class="title"><a href="/2018/12/17/数据结构-堆/">数据结构--堆</a></h1>
+    <h1 class="title">数据结构--堆</h1>
   
 
     </header>
@@ -103,6 +104,42 @@
       
         
         
+  <div class="tags">
+    <a href="/tags/Algorithm/">Algorithm</a>
+  </div>
+
+        <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina"></a>
+    <a href="#" class="bds_tqq" data-cmd="tqq"></a>
+    <a href="#" class="bds_renren" data-cmd="renren"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin"></a>
+</div>
+
+<script>
+    window._bd_share_config = {
+        "common": {
+            "bdSnsKey": {},
+            "bdText": "",
+            "bdMini": "2",
+            "bdPic": "",
+            "bdStyle": "0",
+            "bdSize": "16"
+        },
+        "share": {},
+        "image": {
+            "viewList": ["qzone", "tsina", "tqq", "renren", "weixin"],
+            "viewText": “分享到",
+            "viewSize": "16"
+        },
+        "selectShare": {
+            "bdContainerClass": null,
+            "bdSelectMiniList": ["qzone", "tsina", "tqq", "renren", "weixin"]
+        }
+    };
+    with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+</script>
       
       <div class="clearfix"></div>
     </footer>
@@ -112,55 +149,7 @@
 <div id="toTop">
 	<a href="#">▲</a>
 	<a href="#footer">▼</a>
-</div>
-
-    <article class="post">
-  
-  <div class="post-content">
-    <header>
-        <div class="icon"></div>
-        
-        <time datetime="2018-12-17T02:47:27.000Z"><a href="/2018/12/17/BM字符串匹配算法/">2018-12-17</a></time>
-        
-  
-    <h1 class="title"><a href="/2018/12/17/BM字符串匹配算法/">BM字符串匹配算法</a></h1>
-  
-
-    </header>
-
-    <div class="entry">
-      
-        
-    <div id="toc">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#BM算法"><span class="toc-text">BM算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码实现"><span class="toc-text">代码实现</span></a></li></ol></li></ol>
-    </div>
-
-        <h1 id="BM算法"><a href="#BM算法" class="headerlink" title="BM算法"></a>BM算法</h1><p>关于原理可以参考：<br><a href="https://blog.csdn.net/zpznba/article/details/84943437/" title="我的博客" target="_blank" rel="noopener">我的博客</a><br>这里主要写代码实现</p>
-<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">// a,b 表示主串和模式串；n，m 表示主串和模式串的长度。</span><br><span class="line">  public int bm(char[] a, int n, char[] b, int m) &#123;</span><br><span class="line">  int[] bc = new int[SIZE]; // 记录模式串中每个字符最后出现的位置</span><br><span class="line">  generateBC(b, m, bc); // 构建坏字符哈希表</span><br><span class="line">  int[] suffix = new int[m];</span><br><span class="line">  boolean[] prefix = new boolean[m];</span><br><span class="line">  generateGS(b, m, suffix, prefix);</span><br><span class="line">  int i = 0; // j 表示主串与模式串匹配的第一个字符</span><br><span class="line">  while (i &lt;= n - m) &#123;</span><br><span class="line">    int j;</span><br><span class="line">    for (j = m - 1; j &gt;= 0; --j) &#123; // 模式串从后往前匹配</span><br><span class="line">      if (a[i+j] != b[j]) break; // 坏字符对应模式串中的下标是 j</span><br><span class="line">    &#125;</span><br><span class="line">    if (j &lt; 0) &#123;</span><br><span class="line">      return i; // 匹配成功，返回主串与模式串第一个匹配的字符的位置</span><br><span class="line">    &#125;</span><br><span class="line">    int x = j - bc[(int)a[i+j]];</span><br><span class="line">    int y = 0;</span><br><span class="line">    if (j &lt; m-1) &#123; // 如果有好后缀的话</span><br><span class="line">      y = moveByGS(j, m, suffix, prefix);</span><br><span class="line">    &#125;</span><br><span class="line">    i = i + Math.max(x, y);</span><br><span class="line">  &#125;</span><br><span class="line">  return -1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// j 表示坏字符对应的模式串中的字符下标 ; m 表示模式串长度</span><br><span class="line">private int moveByGS(int j, int m, int[] suffix, boolean[] prefix) &#123;</span><br><span class="line">  int k = m - 1 - j; // 好后缀长度</span><br><span class="line">  if (suffix[k] != -1) return j - suffix[k] +1;</span><br><span class="line">  for (int r = j+2; r &lt;= m-1; ++r) &#123;</span><br><span class="line">    if (prefix[m-r] == true) &#123;</span><br><span class="line">      return r;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return m;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-<!-- 返回顶部 -->
-<div id="toTop">
-	<a href="#">▲</a>
-	<a href="#footer">▼</a>
-</div>
- 
-<nav id="pagination">
-  
-  
-  <div class="clearfix"></div>
-</nav>
-</div></div>
+</div></div></div>
       <aside id="sidebar" class="alignright">
         
           <script language="javascript">

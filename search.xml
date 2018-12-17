@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[数据结构--堆]]></title>
+    <url>%2F2018%2F12%2F17%2F%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%A0%86%2F</url>
+    <content type="text"><![CDATA[数据结构–堆基本概念堆（英语：Heap）是计算机科学中的一种特别的树状数据结构。若是满足以下特性，即可称为堆：“给定堆中任意节点 P 和 C，若 P 是 C 的母节点，那么 P 的值会小于等于（或大于等于） C 的值”。若母节点的值恒小于等于子节点的值，此堆称为最小堆（英语：min heap）；反之，若母节点的值恒大于等于子节点的值，此堆称为最大堆（英语：max heap）。在堆中最顶端的那一个节点，称作根节点（英语：root node），根节点本身没有母节点（英语：parent node）。 性质任意节点小于（或大于）它的所有后裔，最小元（或最大元）在堆的根上（堆序性）。堆总是一棵完全树。即除了最底层，其他层的节点都被元素填满，且最底层尽可能地从左到右填入。 应用The heap data structure has many applications. Heapsort: One of the best sorting methods being in-place and with no quadratic worst-case scenarios.Selection algorithms: A heap allows access to the min or max element in constant time, and other selections (such as median or kth-element) can be done in sub-linear time on data that is in a heap.[17]Graph algorithms: By using heaps as internal traversal data structures, run time will be reduced by polynomial order. Examples of such problems are Prim’s minimal-spanning-tree algorithm and Dijkstra’s shortest-path algorithm.Priority Queue: A priority queue is an abstract concept like “a list” or “a map”; just as a list can be implemented with a linked list or an array, a priority queue can be implemented with a heap or a variety of other methods.K-way merge: A heap data structure is useful to merge many already-sorted input streams into a single sorted output stream. Examples of the need for merging include external sorting and streaming results from distributed data such as a log structured merge tree. The inner loop is obtaining the min element, replacing with the next element for the corresponding input stream, then doing a sift-down heap operation. (Alternatively the replace function.) (Using extract-max and insert functions of a priority queue are much less efficient.)Order statistics: The Heap data structure can be used to efficiently find the kth smallest (or largest) element in an array.]]></content>
+      <tags>
+        <tag>Algorithm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[BM字符串匹配算法]]></title>
+    <url>%2F2018%2F12%2F17%2FBM%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[BM算法关于原理可以参考：我的博客这里主要写代码实现 代码实现1234567891011121314151617181920212223242526272829303132333435363738// a,b 表示主串和模式串；n，m 表示主串和模式串的长度。 public int bm(char[] a, int n, char[] b, int m) &#123; int[] bc = new int[SIZE]; // 记录模式串中每个字符最后出现的位置 generateBC(b, m, bc); // 构建坏字符哈希表 int[] suffix = new int[m]; boolean[] prefix = new boolean[m]; generateGS(b, m, suffix, prefix); int i = 0; // j 表示主串与模式串匹配的第一个字符 while (i &lt;= n - m) &#123; int j; for (j = m - 1; j &gt;= 0; --j) &#123; // 模式串从后往前匹配 if (a[i+j] != b[j]) break; // 坏字符对应模式串中的下标是 j &#125; if (j &lt; 0) &#123; return i; // 匹配成功，返回主串与模式串第一个匹配的字符的位置 &#125; int x = j - bc[(int)a[i+j]]; int y = 0; if (j &lt; m-1) &#123; // 如果有好后缀的话 y = moveByGS(j, m, suffix, prefix); &#125; i = i + Math.max(x, y); &#125; return -1;&#125;// j 表示坏字符对应的模式串中的字符下标 ; m 表示模式串长度private int moveByGS(int j, int m, int[] suffix, boolean[] prefix) &#123; int k = m - 1 - j; // 好后缀长度 if (suffix[k] != -1) return j - suffix[k] +1; for (int r = j+2; r &lt;= m-1; ++r) &#123; if (prefix[m-r] == true) &#123; return r; &#125; &#125; return m;&#125;]]></content>
+      <tags>
+        <tag>Algorithm</tag>
+      </tags>
+  </entry>
+</search>
