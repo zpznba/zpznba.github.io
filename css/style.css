@@ -637,6 +637,7 @@ article footer .counter:before {
   padding-left: 10px;
   font-family: FontAwesome;
 }
+.resume,
 .archive-title {
   color: #999;
   font-weight: normal;
@@ -644,6 +645,7 @@ article footer .counter:before {
   text-shadow: 0 0 1px #fff;
   margin-left: 0.5em;
 }
+.resume:before,
 .archive-title:before {
   font-family: FontAwesome;
   padding-right: 15px;
@@ -1402,4 +1404,45 @@ pre .deletion {
   background-color: #ea6753;
   color: #fff;
   cursor: pointer;
+}
+.category-list-count,
+.tag-list-count,
+.archive-list-count {
+  padding-left: 15px;
+  color: #999;
+  font-size: 0.85em;
+}
+.category-list-count:before,
+.tag-list-count:before,
+.archive-list-count:before {
+  content: "(";
+}
+.category-list-count:after,
+.tag-list-count:after,
+.archive-list-count:after {
+  content: ")";
+}
+.category-list,
+.tag-list,
+.archive-list {
+  font-size: 0.9em;
+  padding: 15px 20px;
+}
+.category-list ul,
+.tag-list ul,
+.archive-list ul,
+.category-list ol,
+.tag-list ol,
+.archive-list ol,
+.category-list dl,
+.tag-list dl,
+.archive-list dl {
+  list-style: none;
+}
+.post {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 25px;
+  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
+  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 }
